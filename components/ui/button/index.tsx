@@ -56,7 +56,7 @@ const PrimitiveIcon = React.forwardRef<
       as: AsComp,
       ...props
     },
-    ref
+    ref,
   ) => {
     color = color ?? classNameColor;
     const sizeProps = useMemo(() => {
@@ -83,7 +83,7 @@ const PrimitiveIcon = React.forwardRef<
     return (
       <Svg ref={ref} height={height} width={width} {...colorProps} {...props} />
     );
-  }
+  },
 );
 
 const Root =
@@ -341,11 +341,11 @@ const buttonGroupStyle = tva({
   base: '',
   variants: {
     space: {
-      'xs': 'gap-1',
-      'sm': 'gap-2',
-      'md': 'gap-3',
-      'lg': 'gap-4',
-      'xl': 'gap-5',
+      xs: 'gap-1',
+      sm: 'gap-2',
+      md: 'gap-3',
+      lg: 'gap-4',
+      xl: 'gap-5',
       '2xl': 'gap-6',
       '3xl': 'gap-7',
       '4xl': 'gap-8',
@@ -368,7 +368,7 @@ const Button = React.forwardRef<
 >(
   (
     { className, variant = 'solid', size = 'md', action = 'primary', ...props },
-    ref
+    ref,
   ) => {
     return (
       <UIButton
@@ -378,7 +378,7 @@ const Button = React.forwardRef<
         context={{ variant, size, action }}
       />
     );
-  }
+  },
 );
 
 type IButtonTextProps = React.ComponentPropsWithoutRef<typeof UIButton.Text> &

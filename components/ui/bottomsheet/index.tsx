@@ -113,7 +113,7 @@ export const BottomSheetPortal = ({
         handleClose();
       }
     },
-    [handleClose]
+    [handleClose],
   );
 
   return (

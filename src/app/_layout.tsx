@@ -1,12 +1,13 @@
-import '../global.css'
+import '../global.css';
 
-// import "'@/src\\global.css'";
-import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
+import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 
-import { Slot } from "expo-router";
+import { Slot } from 'expo-router';
 
 export default function Layout() {
-    return <GluestackUIProvider mode="light"><Slot /></GluestackUIProvider>;
+  return (
+    <GluestackUIProvider mode="light">
+      <Slot />
+    </GluestackUIProvider>
+  );
 }
-
-

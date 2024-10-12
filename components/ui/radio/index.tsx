@@ -62,7 +62,7 @@ const PrimitiveIcon = React.forwardRef<
       as: AsComp,
       ...props
     },
-    ref
+    ref,
   ) => {
     color = color ?? classNameColor;
     const sizeProps = useMemo(() => {
@@ -89,7 +89,7 @@ const PrimitiveIcon = React.forwardRef<
     return (
       <Svg ref={ref} height={height} width={width} {...colorProps} {...props} />
     );
-  }
+  },
 );
 
 const radioStyle = tva({
@@ -135,11 +135,11 @@ const radioLabelStyle = tva({
   parentVariants: {
     size: {
       '2xs': 'text-2xs',
-      'xs': 'text-xs',
-      'sm': 'text-sm',
-      'md': 'text-base',
-      'lg': 'text-lg',
-      'xl': 'text-xl',
+      xs: 'text-xs',
+      sm: 'text-sm',
+      md: 'text-base',
+      lg: 'text-lg',
+      xl: 'text-xl',
       '2xl': 'text-2xl',
       '3xl': 'text-3xl',
       '4xl': 'text-4xl',
@@ -194,7 +194,7 @@ const Radio = React.forwardRef<React.ElementRef<typeof UIRadio>, IRadioProps>(
         context={{ size }}
       />
     );
-  }
+  },
 );
 
 type IRadioGroupProps = React.ComponentProps<typeof UIRadio.Group> &

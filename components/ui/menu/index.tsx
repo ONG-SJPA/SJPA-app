@@ -44,11 +44,11 @@ const menuItemLabelStyle = tva({
     },
     size: {
       '2xs': 'text-2xs',
-      'xs': 'text-xs',
-      'sm': 'text-sm',
-      'md': 'text-base',
-      'lg': 'text-lg',
-      'xl': 'text-xl',
+      xs: 'text-xs',
+      sm: 'text-sm',
+      md: 'text-base',
+      lg: 'text-lg',
+      xl: 'text-xl',
       '2xl': 'text-2xl',
       '3xl': 'text-3xl',
       '4xl': 'text-4xl',
@@ -111,7 +111,7 @@ const Separator = React.forwardRef(
         {...props}
       />
     );
-  }
+  },
 );
 export const UIMenu = createMenu({
   Root: Motion.View,
@@ -157,7 +157,7 @@ const Menu = React.forwardRef<React.ElementRef<typeof UIMenu>, IMenuProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 const MenuItem = UIMenu.Item;
@@ -179,7 +179,7 @@ const MenuItemLabel = React.forwardRef<
       highlight,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <UIMenu.ItemLabel
@@ -198,7 +198,7 @@ const MenuItemLabel = React.forwardRef<
         {...props}
       />
     );
-  }
+  },
 );
 
 const MenuSeparator = UIMenu.Separator;

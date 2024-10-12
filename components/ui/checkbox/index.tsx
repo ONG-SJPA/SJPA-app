@@ -25,7 +25,7 @@ const IndicatorWrapper = React.forwardRef<
 const LabelWrapper = React.forwardRef<React.ElementRef<typeof Text>, TextProps>(
   ({ ...props }, ref) => {
     return <Text {...props} ref={ref} />;
-  }
+  },
 );
 
 type IPrimitiveIcon = React.ComponentPropsWithoutRef<typeof Svg> & {
@@ -63,7 +63,7 @@ const PrimitiveIcon = React.forwardRef<
       as: AsComp,
       ...props
     },
-    ref
+    ref,
   ) => {
     color = color ?? classNameColor;
     const sizeProps = useMemo(() => {
@@ -90,7 +90,7 @@ const PrimitiveIcon = React.forwardRef<
     return (
       <Svg ref={ref} height={height} width={width} {...colorProps} {...props} />
     );
-  }
+  },
 );
 
 const SCOPE = 'CHECKBOX';

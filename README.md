@@ -2,6 +2,10 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Link Docs GlueStack(Componentes React Native)
+
+- [Acessar gluestack-ui v2](https://gluestack.io/ui/docs/components/all-components)
+
 ## Get started
 
 1. Install dependencies

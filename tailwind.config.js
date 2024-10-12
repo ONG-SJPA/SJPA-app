@@ -18,14 +18,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      height:{
+      height: {
         '80vh': '80vh',
         '70vh': '70vh',
         '30vh': '30vh',
         '20vh': '20vh',
       },
-      borderRadius:{
-        '40px':'40px'
+      borderRadius: {
+        '40px': '40px',
       },
       colors: {
         primary: {

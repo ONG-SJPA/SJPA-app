@@ -121,7 +121,7 @@ const PrimitiveIcon = React.forwardRef<
       as: AsComp,
       ...props
     },
-    ref
+    ref,
   ) => {
     color = color ?? classNameColor;
     const sizeProps = useMemo(() => {
@@ -148,7 +148,7 @@ const PrimitiveIcon = React.forwardRef<
     return (
       <Svg ref={ref} height={height} width={width} {...colorProps} {...props} />
     );
-  }
+  },
 );
 
 const ContextView = withStyleContext(View, SCOPE);

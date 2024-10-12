@@ -146,11 +146,11 @@ const actionsheetItemTextStyle = tva({
     },
     size: {
       '2xs': 'text-2xs',
-      'xs': 'text-xs',
-      'sm': 'text-sm',
-      'md': 'text-md',
-      'lg': 'text-lg',
-      'xl': 'text-xl',
+      xs: 'text-xs',
+      sm: 'text-sm',
+      md: 'text-md',
+      lg: 'text-lg',
+      xl: 'text-xl',
       '2xl': 'text-2xl',
       '3xl': 'text-3xl',
       '4xl': 'text-4xl',
@@ -211,11 +211,11 @@ const actionsheetSectionHeaderTextStyle = tva({
       '4xl': 'text-4xl',
       '3xl': 'text-3xl',
       '2xl': 'text-2xl',
-      'xl': 'text-xl',
-      'lg': 'text-lg',
-      'md': 'text-md',
-      'sm': 'text-sm',
-      'xs': 'text-xs',
+      xl: 'text-xl',
+      lg: 'text-lg',
+      md: 'text-md',
+      sm: 'text-sm',
+      xs: 'text-xs',
     },
 
     sub: {
@@ -238,11 +238,11 @@ const actionsheetIconStyle = tva({
   variants: {
     size: {
       '2xs': 'h-3 w-3',
-      'xs': 'h-3.5 w-3.5',
-      'sm': 'h-4 w-4',
-      'md': 'w-4 h-4',
-      'lg': 'h-5 w-5',
-      'xl': 'h-6 w-6',
+      xs: 'h-3.5 w-3.5',
+      sm: 'h-4 w-4',
+      md: 'w-4 h-4',
+      lg: 'h-5 w-5',
+      xl: 'h-6 w-6',
     },
   },
 });
@@ -367,7 +367,7 @@ const ActionsheetItemText = React.forwardRef<
 >(
   (
     { isTruncated, bold, underline, strikeThrough, size, className, ...props },
-    ref
+    ref,
   ) => {
     return (
       <UIActionsheet.ItemText
@@ -383,7 +383,7 @@ const ActionsheetItemText = React.forwardRef<
         {...props}
       />
     );
-  }
+  },
 );
 
 const ActionsheetDragIndicator = React.forwardRef<
@@ -517,7 +517,7 @@ const ActionsheetSectionHeaderText = React.forwardRef<
       highlight,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <UIActionsheet.SectionHeaderText
@@ -536,7 +536,7 @@ const ActionsheetSectionHeaderText = React.forwardRef<
         {...props}
       />
     );
-  }
+  },
 );
 
 const ActionsheetIcon = React.forwardRef<
