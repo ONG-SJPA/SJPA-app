@@ -37,7 +37,7 @@ export default function Login() {
 
   return (
     <SafeAreaView>
-      <View className="bg-green-400 h-full">
+      <View className="h-full">
         <Box className="bg-green-400 w-full h-20vh absolute top-0">
           <VStack className="w-full p-5">
             <Image
@@ -45,15 +45,15 @@ export default function Login() {
               source={require('@/assets/images/logo ong.png')}
               resizeMethod="scale"
             />
-
             <Heading size="3xl">Bem Vindo!</Heading>
             <Text>Faça login para usar o app</Text>
           </VStack>
         </Box>
-        <Box className="bg-gray-200 w-full h-80vh absolute bottom-0 rounded-t-50px">
-          <VStack className="w-full p-5 pt-10">
-            <FormControl>
-              <FormControlLabel>
+
+        <Box className="w-full h-80vh absolute bottom-0 rounded-t-50px">
+          <VStack className="w-full p-5 pt-10 bg-red-400 justify-start items-start">
+            <FormControl className="bg-blue-500 w-full justify-start align-top">
+              <FormControlLabel className="bg-pink-700">
                 <FormControlLabelText>Email</FormControlLabelText>
               </FormControlLabel>
               <Controller
@@ -62,7 +62,6 @@ export default function Login() {
                 control={control}
                 rules={{
                   required: true,
-
                   validate: async (value) => {
                     try {
                       await loginSchema.parseAsync({ email: value });
@@ -73,7 +72,7 @@ export default function Login() {
                   },
                 }}
                 render={({ field: { onChange, value } }) => (
-                  <Input isRequired={true}>
+                  <Input isRequired={true} className="h-20">
                     <InputField
                       placeholder="Enter email"
                       value={value}
