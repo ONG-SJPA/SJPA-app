@@ -5,11 +5,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './Screens/auth/Login/screen';
 
 export default function App() {
-  //fazer logica de autenticção e guardar o token
-  // const { isAuthenticated, token } = useAuthStore<boolean>();
-
-  // const [auth, setAuth] = React.useState<boolean>(false)
-
   const Stack = createNativeStackNavigator();
 
   return (

@@ -13,8 +13,12 @@ import {
 import { Input, InputField } from '@/components/ui/input';
 import { useToast } from '@/components/ui/toast';
 import { useState } from 'react';
+import { useAuth } from '@/src/app/context/AuthContext';
+import { Button, ButtonText } from '@/components/ui/button';
 
 export default function Login() {
+  const { login } = useAuth();
+
   const loginSchema = z.object({
     email: z.string().min(1, 'Email is required').email(),
     password: z.string().min(1, 'Password is required'),
@@ -37,8 +41,8 @@ export default function Login() {
 
   return (
     <SafeAreaView>
-      <View className="bg-green-400 h-full">
-        <Box className="bg-green-400 w-full h-20vh absolute top-0">
+      <View className="bg-green-400">
+        <Box className="bg-green-400 w-full h-20vh top-0">
           <VStack className="w-full p-5">
             <Image
               className="w-14 h-12"
@@ -50,11 +54,13 @@ export default function Login() {
             <Text>Faça login para usar o app</Text>
           </VStack>
         </Box>
-        <Box className="bg-gray-200 w-full h-80vh absolute bottom-0 rounded-t-50px">
+        <Box className="bg-gray-200 w-full h-full bottom-0 rounded-t-40px">
           <VStack className="w-full p-5 pt-10">
             <FormControl>
               <FormControlLabel>
-                <FormControlLabelText>Email</FormControlLabelText>
+                <FormControlLabelText className="w-full">
+                  Email
+                </FormControlLabelText>
               </FormControlLabel>
               <Controller
                 defaultValue=""
@@ -73,17 +79,27 @@ export default function Login() {
                   },
                 }}
                 render={({ field: { onChange, value } }) => (
-                  <Input isRequired={true}>
+                  <Input
+                    isRequired={true}
+                    className="border border-gray-300 rounded-lg h-12 p-2"
+                  >
                     <InputField
                       placeholder="Enter email"
                       value={value}
                       onChangeText={onChange}
                       returnKeyType="done"
+                      className="w-full"
                     />
                   </Input>
                 )}
               />
             </FormControl>
+            <Button
+              onPress={() => login({ email: 'teste@sjpa.com' })}
+              className="p-2 flex justify-center items-center bg-blue-500 rounded-lg mt-5"
+            >
+              <ButtonText>Login</ButtonText>
+            </Button>
           </VStack>
         </Box>
       </View>
